@@ -12,19 +12,19 @@ export class CockpitComponent {
   newServerName : string = '';
   newServerContent : string = '';
   
-  onAddServer() 
+  onAddServer(nameEle : HTMLInputElement, contentEle : HTMLInputElement) 
   {
     this.serverCreated.emit({
-      serverName : this.newServerName,
-      serverContent : this.newServerContent
+      serverName : nameEle.value,
+      serverContent : contentEle.value
     });
   }
 
-  onAddBlueprint()
+  onAddBlueprint(nameEle : HTMLInputElement, contentEle : HTMLInputElement)
   {
     this.blueprintCreated.emit({
-      serverName : this.newServerName,
-      serverContent : this.newServerContent
+      serverName : nameEle.value,
+      serverContent : contentEle.value
     })
   }
 
