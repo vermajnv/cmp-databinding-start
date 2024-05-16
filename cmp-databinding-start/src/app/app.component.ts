@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  counterData : number[] = [];
   serverElements: { type: string, name: string, content: string }[] = [];
-
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
       type: 'server',
@@ -22,5 +22,21 @@ export class AppComponent {
       name: blueprintData.serverName,
       content: blueprintData.serverContent
     });
+  }
+
+  onChangeFirst() : void
+  {
+    this.serverElements[0].name = 'Changed'
+  }
+
+  onDeleteFirst()
+  {
+    this.serverElements.splice(0, 1);
+  }
+
+  onIntervalFired(eventNumber : number)
+  {
+    console.log(eventNumber);
+    this.counterData.push(eventNumber);
   }
 }
