@@ -7,6 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   counterData : number[] = [];
+  numbers : number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  evenNumbers : number[];
+  oddNumbers : number[];
+
   serverElements: { type: string, name: string, content: string }[] = [];
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
@@ -38,5 +42,12 @@ export class AppComponent {
   {
     console.log(eventNumber);
     this.counterData.push(eventNumber);
+  }
+
+  viewOddNumbers()
+  {
+    this.numbers = this.numbers.filter((number) => {
+      return number % 2;
+    })
   }
 }

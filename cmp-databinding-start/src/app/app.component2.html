@@ -1,0 +1,9 @@
+<app-game (intervalFiredEvent)="onIntervalFired($event)"></app-game>
+@for ( eventNumber of counterData; track $index) {
+    @if (eventNumber % 2 === 0) {
+        <app-even [evenTimer]="eventNumber"></app-even>
+    }
+    @else {
+        <app-odd [oddTimer]="eventNumber"></app-odd>
+    }
+}

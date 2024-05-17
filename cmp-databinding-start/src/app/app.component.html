@@ -1,9 +1,21 @@
-<app-game (intervalFiredEvent)="onIntervalFired($event)"></app-game>
-@for ( eventNumber of counterData; track $index) {
-    @if (eventNumber % 2 === 0) {
-        <app-even [evenTimer]="eventNumber"></app-even>
-    }
-    @else {
-        <app-odd [oddTimer]="eventNumber"></app-odd>
-    }
-}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="viewOddNumbers()">Show odd number</button>
+
+            <ul class="list-group">
+                <div>
+                    @for (number of numbers; track $index) {
+                        <li class="list-group-item" [ngClass]="number % 2 ? 'odd' : 'even'">
+                            {{number}}
+                        </li>
+                    }
+                </div>
+            </ul>
+
+            <span appBasicHighlight>Impose custom directive</span>
+            <p appBetterHighlighter>This is a better directive implementation</p>
+        </div>
+    </div>
+
+</div>

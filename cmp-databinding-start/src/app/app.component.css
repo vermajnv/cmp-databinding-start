@@ -5,3 +5,13 @@
 p {
   color: blue;
 }
+
+.odd {
+  color: seagreen;
+  background-color: white;
+}
+
+.even {
+  color: white;
+  background-color: seagreen;
+}
