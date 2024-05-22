@@ -12,6 +12,7 @@ import { OddComponent } from './odd/odd.component';
 import { BasicHighlightDirective } from './basic-highlight.directive';
 import { BetterHighlighterDirective } from './directives/better-highlighter.directive';
 import { HostHighlighterDirective} from './directives/host-highlighter.directive';
+import { HostBindingHighlighterDirective} from './directives/hostbinding-highlighter.directive'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HostHighlighterDirective} from './directives/host-highlighter.directive
     OddComponent,
     BasicHighlightDirective,
     BetterHighlighterDirective,
-    HostHighlighterDirective
+    HostHighlighterDirective,
+    HostBindingHighlighterDirective
   ],
   imports: [
     BrowserModule,
