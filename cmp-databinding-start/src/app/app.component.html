@@ -29,6 +29,13 @@
             <p improvedHighlighter>This is a better directive implementation using host</p>
             <p appHostBindingDirective defaultColor="blue" elementColor="yellow">This is a better directive implementation using host Binding</p>
         </div>
+        <div class="row" [ngSwitch]="value">
+            <p *ngSwitchCase="5">Value for 5</p>
+            <p *ngSwitchCase="10">Value for 10</p>
+            <p *ngSwitchCase="15">Value for 15</p>
+            <p *ngSwitchCase="20">Value for 20</p>
+            <p *ngSwitchDefault>Default Value</p>
+        </div>
     </div>
 
 </div>

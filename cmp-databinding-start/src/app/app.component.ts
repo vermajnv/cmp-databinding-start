@@ -11,7 +11,7 @@ export class AppComponent {
   evenNumbers : number[];
   oddNumbers : number[];
   onlyOdd : boolean = true;
-  
+  value = 10;
   serverElements: { type: string, name: string, content: string }[] = [];
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
