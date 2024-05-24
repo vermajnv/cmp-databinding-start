@@ -13,6 +13,7 @@ import { BasicHighlightDirective } from './basic-highlight.directive';
 import { BetterHighlighterDirective } from './directives/better-highlighter.directive';
 import { HostHighlighterDirective} from './directives/host-highlighter.directive';
 import { HostBindingHighlighterDirective} from './directives/hostbinding-highlighter.directive'
+import { UnlessDirective} from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HostBindingHighlighterDirective} from './directives/hostbinding-highlig
     BasicHighlightDirective,
     BetterHighlighterDirective,
     HostHighlighterDirective,
-    HostBindingHighlighterDirective
+    HostBindingHighlighterDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

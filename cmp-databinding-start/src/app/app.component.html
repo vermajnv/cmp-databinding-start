@@ -3,8 +3,19 @@
         <div class="col-xs-12">
             <button class="btn btn-primary" (click)="viewOddNumbers()">Show odd number</button>
 
-            <ul class="list-group">
+            <!-- <ul class="list-group">
                 <div>
+                    @for (number of numbers; track $index) {
+                        <li class="list-group-item" [ngClass]="number % 2 ? 'odd' : 'even'">
+                            {{number}}
+                        </li>
+                    }
+                </div>
+            </ul> -->
+
+        <ul class="list-group" *appUnless="!onlyOdd">
+                <div>
+                    <li>Here</li>
                     @for (number of numbers; track $index) {
                         <li class="list-group-item" [ngClass]="number % 2 ? 'odd' : 'even'">
                             {{number}}

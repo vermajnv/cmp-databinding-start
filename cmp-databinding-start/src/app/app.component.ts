@@ -10,7 +10,8 @@ export class AppComponent {
   numbers : number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   evenNumbers : number[];
   oddNumbers : number[];
-
+  onlyOdd : boolean = true;
+  
   serverElements: { type: string, name: string, content: string }[] = [];
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
